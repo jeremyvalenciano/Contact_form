@@ -1,0 +1,139 @@
+@import "spinner";
+
+@mixin error-styles {
+  color: #ba3939;
+  background-color: #ffe0e0;
+  border: 1px solid #a33a3a;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  background-color: #eeeeee;
+  color: #444444;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.error-styles {
+  background-color: #ffe0e0 !important;
+  border: 1px solid #a33a3a !important;
+  color: #ba3939 !important;
+}
+
+.succes-styles {
+  background-color: #eeeeee !important;
+  border: 2px solid #5cb85c !important;
+  color: #444444;
+}
+
+.sent-styles {
+  padding: 15px;
+  background-color: #3a9d3a !important;
+  border: 2px solid #444444 !important;
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.field-required {
+  margin: 10px;
+  text-align: center;
+  @include error-styles();
+  padding: 12px 15px;
+}
+
+.container {
+
+  .title {
+    color: black;
+    text-align: center;
+    font-size: 2.5rem;
+
+    &__text {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+  }
+
+  .form {
+    border: .0625rem solid #5d5d5d5d;
+    padding: 25px;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    margin-inline: 15px;
+
+    &__text {
+      font-size: 1.2rem;
+      color: #444444;
+      font-weight: bold;
+      margin: 10px 0px;
+    }
+
+    #issue {
+      background-color: #eeeeee;
+      width: 100%;
+      font-size: 1rem;
+      padding: 10px;
+      border-radius: 4px;
+      border: .0625rem solid #5d5d5d5d;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    #message {
+      background: #eeeeee;
+      color: black;
+      width: 100%;
+      font-size: 1.2rem;
+      border: .0625rem solid #5d5d5d5d;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #sendBtn {
+      cursor: not-allowed;
+    }
+
+    input[type="button"],
+    input[type="submit"] {
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 15px 30px;
+
+      &:hover {
+        background-color: #5d5d5d5d;
+        border-color: #444444;
+      }
+    }
+
+    #message {
+      color: #444444;
+    }
+
+
+
+
+  }
+
+}
+
+//desktop styles
+
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 60%;
+    margin-inline: auto;
+  }
+}
