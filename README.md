@@ -8,4 +8,5 @@ that the user want to send is correct, in this way we can manage it correctly.
 - Javascript
 - DOM manipulation
 ## Final demo 
-https://ecommerce-cart-test.netlify.app
+contact-form-vanillajs.netlify.app
+
